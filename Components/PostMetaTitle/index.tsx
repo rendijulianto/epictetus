@@ -1,5 +1,12 @@
 import Link from "next/link";
-export default function PostMetaTitle({ category, date, title, center }) {
+interface PostMetatitleProps {
+  category: string;
+  date: string;
+  title: string;
+  center: boolean;
+}
+export default function PostMetaTitle(props: PostMetatitleProps) {
+  const { category, date, title, center } = props;
   return (
     <>
       <div className="flex items-center text-white/60 space-x-4">

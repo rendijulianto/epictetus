@@ -1,4 +1,10 @@
-export default function PostAuthor({ authorAvatar, authorName, authorJob }) {
+interface PostAuthorProps {
+  authorAvatar: string;
+  authorName: string;
+  authorJob: string;
+}
+export default function PostAuthor(props: PostAuthorProps) {
+  const { authorAvatar, authorName, authorJob } = props;
   return (
     <>
       <div className="flex items-center mt-4">
