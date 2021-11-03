@@ -2,7 +2,9 @@ const { url } = require('inspector')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    content: ["./src/pages/**/*.{js,jsx,ts,tsx}", "./src/components/**/*.{js,jsx,ts,tsx}"]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
